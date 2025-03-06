@@ -1,6 +1,6 @@
 // nav.js
 function createNavBar() {
-    const navHTML = `
+  const navHTML = `
      <!DOCTYPE html>
 <html>
 
@@ -28,7 +28,7 @@ function createNavBar() {
 				</button>
 				<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
 					<div class="navbar-nav">
-						<a class="nav-link" aria-current="page" href="Homepage.html">
+						<a class="nav-link" aria-current="page" href="index.html">
 							الصفحة الرئيسية
 							<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
 								class="bi bi-house" viewBox="0 0 16 16">
@@ -69,11 +69,11 @@ function createNavBar() {
 	</body>
 </html>
     `;
-    return navHTML;
-  }
-  
-  function addNavBarToPage() {
-    const navHTML = createNavBar();
-    const navPlaceholder = document.getElementById('navbar');
-    navPlaceholder.innerHTML = navHTML;
-  }
+  return navHTML;
+}
+
+function addNavBarToPage() {
+  const navHTML = createNavBar();
+  const navPlaceholder = document.getElementById("navbar");
+  navPlaceholder.innerHTML = navHTML;
+}
