@@ -21,7 +21,7 @@
 	border-radius:20%;
 	text-align:center;
 	overflow:hidden;
-	font-family: NotoNaskhArabic;
+	font-family: "Noto Naskh Arabic";
 }
 .picker:hover{ transform:rotateY(180deg); }
 .face { z-index:2; background-color:#ddd; }
@@ -50,7 +50,7 @@
 	background-color:#ddd;
 	 transform:rotateY(180deg);
 }
-.picker > .backface > p { margin:13px; font-family: NotoNaskhArabic; }
+.picker > .backface > p { margin:13px; font-family: "Noto Naskh Arabic"; }
 .row a { margin-bottom:7px; }
 #content a {transition: all .7s ease-in-out; }
 #content a:hover { color:#f48e22 !important; }

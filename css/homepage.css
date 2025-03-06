@@ -4,7 +4,7 @@
 
 h3 {
   font-size: 25px;
-  font-family: ElMessiri;
+  font-family: "El Messiri";
 }
 
 p {
@@ -17,7 +17,7 @@ q {
 
 /*auto slide*/
 #view {
-  margin-top: 80px;
+  margin-top: 79px;
 }
 
 .carousel-caption {
@@ -142,7 +142,7 @@ p[indicator="person=name"] {
 }
 
 .footer a {
-  font-family: ZenMaruGothic;
+  font-family: "Zen Maru Gothic";
   color: black;
   text-decoration: none;
 }

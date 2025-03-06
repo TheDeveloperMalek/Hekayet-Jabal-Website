@@ -1,6 +1,6 @@
 // loading.js
 function createLoadingPage() {
-    const loadingPageHtml = `
+  const loadingPageHtml = `
      <!DOCTYPE html>
 <html>
 	
@@ -8,8 +8,6 @@ function createLoadingPage() {
 		<meta charset="utf-8">
 		<meta name="description" content="This is my first attempt to coding in web">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<!-- <link rel="stylesheet" href="css/bootstrap.css" > -->
-		<!-- <link rel="stylesheet" href="css/template.css" > -->
 		<title> Resturant Homepage </title>
 	</head>
 	
@@ -20,7 +18,7 @@ function createLoadingPage() {
 				<p style="font-family: none;">
 					<img src="photoes/shared/resturant-logo.jpg" />
 					 جارِ التحميل    
-					 <span class="spinner-border" role="loading"></span>
+					 <div class="loader"></div>
 				 </p>
 			 </div>
 		</div>
@@ -30,11 +28,11 @@ function createLoadingPage() {
 
 	</html>
     `;
-    return loadingPageHtml;
-  }
-  
-  function addLoadingPage() {
-    const loadingPageHtml = createLoadingPage();
-    const loadingPageholder = document.getElementById('loading-page');
-    loadingPageholder.innerHTML = loadingPageHtml;
-  } 
+  return loadingPageHtml;
+}
+
+function addLoadingPage() {
+  const loadingPageHtml = createLoadingPage();
+  const loadingPageholder = document.getElementById("loading-page");
+  loadingPageholder.innerHTML = loadingPageHtml;
+}
