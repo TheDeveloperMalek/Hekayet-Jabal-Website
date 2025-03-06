@@ -80,19 +80,35 @@ q {
   padding-top: 20px;
   padding-bottom: 20px;
   min-height: 290px;
-  background-color: gainsboro;
+  background-color: rgba(197, 197, 197, 0.171) !important;
+}
+
+.content {
+  word-wrap: break-word;
+}
+
+.content .img {
+  max-width: 100px;
+}
+
+.content .label {
+  border-bottom: 1px dashed #2c2d334f;
 }
 
 .date {
   bottom: 14px;
   font-size: 20px;
-  border-bottom: solid 2px #aaa;
+}
+
+.content .date svg {
+  color: #f48e22;
 }
 
 /*testimonials section (opinions)*/
 .testimonials {
   padding-top: 30px;
   direction: rtl;
+  background-color: #dbd5d5c0 !important;
 }
 
 .testimonials>h3 {
@@ -131,25 +147,42 @@ p[indicator="person=name"] {
 }
 
 /*footer*/
-.footer {
-  background-color: #bbb;
-  padding: 10px;
+footer {
+  background-color: #282932;
 }
 
-.footer p {
-  font-family: Rajdhani;
-  margin-bottom: 0px;
+.main-title {
+  position: relative;
+  font-family: "El Messiri";
+  width: fit-content;
 }
 
-.footer a {
-  font-family: "Zen Maru Gothic";
-  color: black;
-  text-decoration: none;
+.main-title::after {
+  content: '';
+  position: absolute;
+  height: 5px;
+  width: 100%;
+  bottom: -10px;
+  right: 0px;
+  background-color: #f48e22;
+  border-radius: 5px;
 }
 
-/*additional for fixing the elements of content that is saved in the page*/
-.content {
-  word-wrap: break-word;
+footer .image {
+  max-width: 150px;
+}
+
+footer svg {
+  color: #f48e22;
+}
+
+footer .creator {
+  background-color: #373844;
+}
+
+footer .qr-image {
+  max-width: 170px;
+  max-height: 170px;
 }
 
 /*grouping*/

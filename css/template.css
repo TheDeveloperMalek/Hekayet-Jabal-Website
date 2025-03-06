@@ -3,6 +3,14 @@
 /*other customization*/
 * { z-index: 0; }
 *::selection { background-color:black; }
+
+::-webkit-scrollbar {
+    width: 20px;
+    background-color: var(--bs-gray-300);
+}
+::-webkit-scrollbar-thumb {
+    background-color: #f48e22;
+}
 div { transition:all 0.9s ease-in-out; }
 body{
     background-color: #eee;
