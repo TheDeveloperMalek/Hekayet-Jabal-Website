@@ -1,0 +1,103 @@
+/*importing fonts*/
+@import url('fonts.css');
+/*other customization*/
+* { z-index: 0; }
+*::selection { background-color:black; }
+div { transition:all 0.9s ease-in-out; }
+body{
+    background-color: #eee;
+	min-height: 630px;
+    direction: rtl;
+}
+/*navigation bar*/
+.navbar{
+    padding:5px;
+    margin-top:0px;
+    z-index:1;
+    direction: ltr;
+    /* border-radius:0px 0px 23px 23px; */ /*optional to use it*/
+}
+.navbar-brand { transition: all 0.8s ease-out; font-size:20px; font-family: Cairo;}
+.navbar-brand img {
+    max-width: 60px;
+    max-height: 60px;
+}
+.nav-link.active
+{
+    left:10px;
+    background:rgb(241, 240, 240);
+    border-radius:8px;
+    padding-right: 15px;
+    color: #f48e22 !important;
+} 
+.navbar-collapse { padding-top:10px; direction: rtl; }
+.nav-link { transition: all 0.4s ease-out; font-size:20px;font-family:Tajawal }
+.navbar-toggler { border-radius:90px; width: 60px; }
+/*loading page*/
+#loading-page 
+{
+	height: 100%;
+	background-color: #555;
+    transition: all 0.1s ease;
+    z-index: 2;
+}
+.content-of-loading-page { margin-top: 80px auto; text-align:center; }
+.content-of-loading-page p{ font-size: 25px; font-weight: bold;  }
+.content-of-loading-page p span{ font-size: 18px; }
+.content-of-loading-page img
+{
+	width:200px;
+	height: 200px;
+	display: block;
+	margin: 160px auto 20px auto;
+}
+/*grouping*/
+*::selection ,
+.navbar-brand ,
+.navbar-nav a:hover ,
+.nav-link.active:hover ,
+.content-of-loading-page ,
+.nav-link.active
+{
+    color:#f48e22;
+}
+.navbar , 
+#loading-page 
+{
+    top:0px;
+    left:0px;
+    position: fixed;
+	width: 100%;
+}
+
+@media(max-width: 992px)
+{
+    .navbar-nav a:hover,.nav-link.active:hover { padding-right: 20px; }
+}
+/*back button to the top of the page*/
+#backToTopBtn 
+{
+    display:block;
+    opacity:0;
+    position: fixed;
+    transition: 0.6s all ease-in-out;
+    top:93%;
+    left:88%;
+    background-color: #ddd;
+    min-width:30px;
+    min-height: 30px;
+    border-radius:12px;
+}
+#backToTopBtn:hover
+{
+   box-shadow:
+    6px 6px 6px #babecc
+,  -6px -6px 6px #babecc 
+,  -6px 6px 6px #babecc
+,   6px -6px 6px #babecc;
+}
+#backToTopBtn a
+{
+    width:100%;
+    color: #f48e22;
+}

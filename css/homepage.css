@@ -1,0 +1,204 @@
+* {
+  font-family: Amiri;
+}
+
+h3 {
+  font-size: 25px;
+  font-family: ElMessiri;
+}
+
+p {
+  font-size: 23px;
+}
+
+q {
+  font-size: 27px;
+}
+
+/*auto slide*/
+#view {
+  margin-top: 80px;
+}
+
+.carousel-caption {
+  width: fit-content;
+  bottom: 40px;
+  background-color: #aaaaaab0;
+}
+
+.menu {
+  background-color: #aaa;
+  padding: 20px 20px;
+  min-height: 300px;
+}
+
+.menu a {
+  text-decoration: none;
+}
+
+.menu img {
+  transition: all 1s ease;
+  position: relative;
+  width: 120px;
+  height: 120px;
+  margin-top: 50px;
+  animation: pulse 1.3s infinite;
+}
+
+.menu img:hover {
+  transform: scale(1.150);
+}
+
+.menu svg {
+  /* color:orange; */
+  position: relative;
+  top: 20px;
+  right: 25px;
+  font-size: 130px;
+  display: inline-block;
+  animation: bounce 800ms infinite;
+}
+
+.menu p {
+  margin-top: 30px;
+}
+
+/*new dishes*/
+.new-dishes {
+  padding-top: 10px;
+  min-height: 200px;
+  min-width: 200px;
+  background-color: crimson;
+}
+
+.new-dishes h3 {
+  color: orange
+}
+
+/*announcement section*/
+#latest-announcement {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  min-height: 290px;
+  background-color: gainsboro;
+}
+
+.date {
+  bottom: 14px;
+  font-size: 20px;
+  border-bottom: solid 2px #aaa;
+}
+
+/*testimonials section (opinions)*/
+.testimonials {
+  padding-top: 30px;
+  direction: rtl;
+}
+
+.testimonials>h3 {
+  color: rgb(53, 84, 170);
+}
+
+p[indicator="person=name"] {
+  color: rgb(255, 0, 0);
+}
+
+#testimonials .carousel-indicators {
+  top: 100px;
+}
+
+#opinions {
+  bottom: 91px;
+}
+
+#testimonials .carousel-indicators button {
+  text-indent: 0;
+  height: 50px;
+  width: 50px;
+  top: 10px;
+  background-color: #00000000;
+  margin: 12px;
+  transition: all 0.8s ease-in-out;
+}
+
+#testimonials .carousel-indicators .active img {
+  outline: solid 3px darkgray;
+}
+
+#testimonials .carousel-indicators button img {
+  max-width: 50px;
+  border-radius: 25px;
+}
+
+/*footer*/
+.footer {
+  background-color: #bbb;
+  padding: 10px;
+}
+
+.footer p {
+  font-family: Rajdhani;
+  margin-bottom: 0px;
+}
+
+.footer a {
+  font-family: ZenMaruGothic;
+  color: black;
+  text-decoration: none;
+}
+
+/*additional for fixing the elements of content that is saved in the page*/
+.content {
+  word-wrap: break-word;
+}
+
+/*grouping*/
+.date,
+.testimonials,
+#testimonials .carousel-indicators,
+#opinions {
+  position: relative;
+}
+
+#testimonials .carousel-indicators .active img,
+.content {
+  overflow: hidden;
+}
+
+#view,
+.new-dishes {
+  direction: ltr;
+}
+
+/*animation*/
+@keyframes pulse {
+  from {
+    transform: scale3d(1, 1, 1);
+  }
+
+  50% {
+    transform: scale3d(1.05, 1.05, 1.05);
+  }
+
+  to {
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+@keyframes bounce {
+
+  0%,
+  10%,
+  20%,
+  40%,
+  50%,
+  80%,
+  100% {
+    transform: translateX(0px);
+  }
+
+  30%,
+  60% {
+    transform: translateX(20px);
+  }
+}

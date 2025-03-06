@@ -1,0 +1,102 @@
+/*card structure*/
+#card { perspective: 800px; }
+.picker {
+	width:310px;
+	height:330px;
+	margin:180px auto;
+	font-family:sans-serif;
+	transition: all 2s ease-in-out;
+	transform-style:preserve-3d;
+	animation: flipInY 1.2s ease;
+     animation-delay: .8s;
+}
+.picker > div {
+	font-family:Arial;
+	height:100%;
+	width:100%;
+	backface-visibility:hidden;
+	position:absolute;
+	left:0;
+	top:0;
+	border-radius:20%;
+	text-align:center;
+	overflow:hidden;
+	font-family: NotoNaskhArabic;
+}
+.picker:hover{ transform:rotateY(180deg); }
+.face { z-index:2; background-color:#ddd; }
+.header
+{
+	height:30%;
+	border-radius:60px 60px 0px 0px;
+}
+	.picker > div > div > h1 { font-family: Beiruti; top:40%; }
+.picker > div > p {
+	color:#555;
+	margin:40px;
+	font-size: 23px;
+	bottom: 5px;
+	
+}
+.picker > .face > p { line-height:30px; }
+.picker > div > span[name="instruction"] {
+	margin:10px auto;
+	color:#888;
+	font-size: 18px;
+	bottom: 23px;
+}
+.backface {
+	z-index:1;
+	background-color:#ddd;
+	 transform:rotateY(180deg);
+}
+.picker > .backface > p { margin:13px; font-family: NotoNaskhArabic; }
+.row a { margin-bottom:7px; }
+#content a {transition: all .7s ease-in-out; }
+#content a:hover { color:#f48e22 !important; }
+#content a:link { text-decoration: none; }
+/*grouping the same css styling*/
+.picker ,
+.picker > div > p,
+.picker > div > span[name="instruction"],
+.picker > div > div > h1
+{
+	position: relative;
+}
+.header,
+.picker > div > div > h1
+{
+	margin:0;
+}
+.picker > div , 
+#phone
+{
+	color: white; 	
+}
+
+/*animation*/
+@keyframes flipInY {
+	from {
+	  transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
+	  animation-timing-function: ease-in;
+	  opacity: 0;
+	}
+  
+	40% {
+	  transform: perspective(400px) rotate3d(0, 1, 0, -20deg);
+	  animation-timing-function: ease-in;
+	}
+  
+	60% {
+	  transform: perspective(400px) rotate3d(0, 1, 0, 10deg);
+	  opacity: 1;
+	}
+  
+	80% {
+	  transform: perspective(400px) rotate3d(0, 1, 0, -5deg);
+	}
+  
+	to {
+	  transform: perspective(400px);
+	}
+  }

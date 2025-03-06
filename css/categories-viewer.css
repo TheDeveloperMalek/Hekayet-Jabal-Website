@@ -1,0 +1,74 @@
+/*categories*/
+body
+{
+    background: url("../photoes/shared/food-background.jpg") no-repeat fixed center  center;
+    background-size: cover;
+}
+.container { margin-top:150px; margin-bottom: 40px; }
+.category-item
+{
+    background-color: #3f372e;
+    min-height: 180px;
+    margin: 25px auto;
+    border:solid 8px wheat;
+    box-shadow:25px 21px 19px black;
+    visibility: hidden;
+    opacity:.9;
+}
+.category-item:hover 
+{
+  opacity: 1;
+   box-shadow:
+     8px 8px 12px #ffba85
+ ,  -8px -8px 12px #ffba85 
+ ,  -8px 8px 12px #ffba85
+ ,   8px -8px 12px #ffba85;
+ }
+
+ @media(min-width: 992px)
+ {
+    .category-item {
+      max-width: 600px;
+    }
+ }
+ .title
+ {
+  background-color: #79604d;
+  color: white;
+  top:5px;
+  text-decoration: none;
+  transition: all .8s ease-in-out;
+  font-size: 28px;
+  font-family: Beiruti;
+  border-radius: 20px;
+  display: inline-block;
+  padding: 7px;
+}
+.title > img
+{
+    width:60px;
+    height:60px;
+  }
+  .content 
+  {
+    font-size:28px;
+    font-family: Beiruti;
+    color:white;
+    line-height: 46px;
+  }
+  /*animation*/
+  .slide
+  {
+     animation: slideInRight 1s ease;
+     visibility: visible;
+  }
+  @keyframes slideInRight {
+    from {
+      transform: translate3d(100%, 0, 0);
+      visibility: visible;
+    }
+  
+    to {
+      transform: translate3d(0, 0, 0);
+    }
+  }

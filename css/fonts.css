@@ -1,0 +1,54 @@
+@font-face {
+    font-family: 'Amiri';
+    font-style: normal;
+    src: url('../fonts/Amiri-Regular.ttf') format('truetype');
+  }
+
+  @font-face {
+    font-family: 'Beiruti';
+    font-style: normal;
+    src: url('../fonts/Beiruti-Regular.ttf') format('truetype');
+  }
+
+  @font-face {
+    font-family: 'Cairo';
+    font-style: normal;
+    src: url('../fonts/Cairo-Regular.ttf') format('truetype');
+  }
+  
+  @font-face {
+    font-family: 'ElMessiri';
+    font-style: normal;
+    src: url('../fonts/ElMessiri-Regular.ttf') format('truetype');
+  }
+    
+  @font-face {
+    font-family: 'NotoNaskhArabic';
+    font-style: normal;
+    src: url('../fonts/NotoNaskhArabic-Regular.ttf') format('truetype');
+  }
+    
+  @font-face {
+    font-family: 'Rajdhani';
+    font-style: normal;
+    src: url('../fonts/Rajdhani-Regular.ttf') format('truetype');
+  }
+    
+  @font-face {
+    font-family: 'Tajawal';
+    font-style: normal;
+    src: url('../fonts/Tajawal-Regular.ttf') format('truetype');
+  }
+    
+  @font-face {
+    font-family: 'Zain';
+    font-style: normal;
+    src: url('../fonts/Zain-Regular.ttf') format('truetype');
+  }
+    
+  @font-face {
+    font-family: 'ZenMaruGothic';
+    font-style: normal;
+    src: url('../fonts/ZenMaruGothic-Regular.ttf') format('truetype');
+  }
+  
