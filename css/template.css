@@ -120,7 +120,7 @@ body{
     transition: 0.6s all ease-in-out;
     top:93%;
     left:88%;
-    background-color: #ddd;
+    background-color: white;
     min-width:30px;
     min-height: 30px;
     border-radius:12px;

@@ -1,0 +1,63 @@
+* {
+    font-family: Amiri;
+}
+
+h5 {
+    font-size: 25px;
+    font-family: "El Messiri";
+}
+
+.offers {
+    margin-top: 100px;
+}
+
+.offers .card {
+    position: relative;
+}
+
+.offers .card::before {
+    content: '';
+    position: absolute;
+    top: 86px;
+    right: 10px;
+    border: 12px solid white;
+    border-color: transparent transparent white transparent;
+    z-index: 2;
+}
+
+.offers .card::after {
+    content: 'عرض خاص';
+    position: absolute;
+    width: fit-content;
+    height: 110px;
+    top: 0px;
+    right: 10px;
+    writing-mode: vertical-rl;
+    background-color: #f48e22;
+    color: white;
+
+}
+
+.offers .card-body {
+    direction: rtl;
+}
+
+.offers .card-body ul li::before {
+    /* content: '\F582'; */
+    font-family: "bootstrap-icons";
+    margin-inline-end: 3px;
+}
+
+@media(min-width: 992px) {
+    .offers .row {
+        grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+        gap: 40px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .offers .row {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 20px;
+    }
+}

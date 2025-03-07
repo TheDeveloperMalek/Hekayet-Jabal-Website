@@ -1,116 +1,115 @@
 /*categories*/
-* { font-family: Amiri; }
-h3 { font-size: 25px; font-family: "El Messiri"; }
-p { font-size:23px; }
-q { font-size:27px; }
-body{
-    background: url("../photoes/shared/food-background.jpg") no-repeat fixed center  center;
-    background-size: cover;
+* {
+  font-family: Amiri;
 }
-.container { margin-top:150px; margin-bottom: 40px; }
+
+h3 {
+  font-size: 25px;
+  font-family: "El Messiri";
+}
+
+p {
+  font-size: 23px;
+}
+
+q {
+  font-size: 27px;
+}
+
+body {
+  background: url("../photoes/shared/food-background.jpg") no-repeat fixed center center;
+  background-size: cover;
+}
+
+.container {
+  margin-top: 100px;
+  margin-bottom: 40px;
+}
+
 /*categories styling*/
-.category-item
-{
-    background-color: #ddd;
-    min-height: 170px;
-    width:170px;
-    margin: 25px auto;
-    font-size:19px;
-    border:solid 1px gray;
-    text-align: center;
-    padding:10px;
-    border-radius: 25px;
-    box-shadow:25px 21px 19px black;
-    visibility: hidden;
+.category-item {
+  background-color: #ddd;
+  min-height: 170px;
+  width: 170px;
+  margin: 25px auto;
+  font-size: 19px;
+  border: solid 1px gray;
+  text-align: center;
+  padding: 10px;
+  border-radius: 25px;
+  box-shadow: 25px 21px 19px black;
+  visibility: hidden;
 }
-.category-item:hover 
-{ 
+
+.category-item:hover {
   transform: scale3d(1.08, 1.08, 1.08);
-   box-shadow:
-       8px 8px 12px #cdd0db
-   ,  -8px -8px 12px #cdd0db 
-   ,  -8px 8px 12px #cdd0db
-   ,   8px -8px 12px #cdd0db;
+  box-shadow:
+    8px 8px 12px #cdd0db, -8px -8px 12px #cdd0db, -8px 8px 12px #cdd0db, 8px -8px 12px #cdd0db;
 }
-.category-item > a > img
-{
-    margin:10px auto;
-    width:90px;
-    height:90px;
-    display: block;
+
+.category-item>a>img {
+  margin: 10px auto;
+  width: 90px;
+  height: 90px;
+  display: block;
 }
-.category-item a
-{
-    position: relative;
-    color:rgb(17, 109, 214);
-    font-size: 25px;
-    top:3px;
-    text-decoration: none;
-    transition: all .8s ease-in-out;
-    font-family: Zain;
+
+.category-item a {
+  position: relative;
+  color: rgb(17, 109, 214);
+  font-size: 25px;
+  top: 3px;
+  text-decoration: none;
+  transition: all .8s ease-in-out;
+  font-family: Zain;
 }
-.category-item a:hover { color:chocolate; }
-/*offers section*/
-.offers
-{
-    padding: 14px 30px;
-    background-color:cornflowerblue;
-    border-radius: 25px;
-    margin-top: 30px;
+
+.category-item a:hover {
+  color: chocolate;
 }
-.offers ,
-.offers p { color: white; }
-.offers p { font-size:28px;margin:30px auto; }
-.offers p span { color:rgb(159, 242, 253); display: block; }
-.offers dt  { margin: 0px; }
-.offers dt{ color:aqua; font-size:24px; }
-.offers dd
-{
-    margin: 10px auto;
-    color:yellow;
-    font-size: 22px;
-}
+
 /*animation*/
-.bounceInOnload
-{
-     animation: bounceIn 1s ease;
-     animation-delay: .8s;
-     visibility: visible;
+.bounceInOnload {
+  animation: bounceIn 1s ease;
+  animation-delay: .8s;
+  visibility: visible;
 }
+
 @keyframes bounceIn {
-    from,
-    20%,
-    40%,
-    60%,
-    80%,
-    to {
-      animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-    }
-  
-    0% {
-      opacity: 0;
-      transform: scale3d(0.3, 0.3, 0.3);
-    }
-  
-    20% {
-      transform: scale3d(1.1, 1.1, 1.1);
-    }
-  
-    40% {
-      transform: scale3d(0.9, 0.9, 0.9);
-    }
-  
-    60% {
-      opacity: 1;
-      transform: scale3d(1.03, 1.03, 1.03);
-    }
-  
-    80% {
-      transform: scale3d(0.97, 0.97, 0.97);
-    }
-  
-    to {
-      opacity: 1;
-      transform: scale3d(1, 1, 1);
-    }
+
+  from,
+  20%,
+  40%,
+  60%,
+  80%,
+  to {
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
   }
+
+  0% {
+    opacity: 0;
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+
+  20% {
+    transform: scale3d(1.1, 1.1, 1.1);
+  }
+
+  40% {
+    transform: scale3d(0.9, 0.9, 0.9);
+  }
+
+  60% {
+    opacity: 1;
+    transform: scale3d(1.03, 1.03, 1.03);
+  }
+
+  80% {
+    transform: scale3d(0.97, 0.97, 0.97);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale3d(1, 1, 1);
+  }
+}

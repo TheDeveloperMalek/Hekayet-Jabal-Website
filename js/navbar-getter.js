@@ -18,7 +18,7 @@ function createNavBar() {
 		<!--navigation bar-->
 		<nav class="navbar fixed-top p-1 navbar-expand-lg navbar-light bg-light">
 			<div  class="container-fluid">
-				<a class="navbar-brand" href="Homepage.html">
+				<a class="navbar-brand" href="index.html">
 					<img height="80" width="80" src="photoes/shared/resturant-logo.jpg" />
 					حكاية جبل
 				</a>
