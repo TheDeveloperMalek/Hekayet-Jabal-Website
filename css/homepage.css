@@ -2,86 +2,98 @@
   font-family: Amiri;
 }
 
-h3 {
-  font-size: 25px;
-  font-family: "El Messiri";
-}
-
 p {
   font-size: 23px;
 }
 
-q {
-  font-size: 27px;
+/* Frequently Used  */
+.main-title {
+  position: relative;
+  font-family: "El Messiri";
+  width: fit-content;
+}
+
+.main-title::after {
+  content: '';
+  position: absolute;
+  height: 5px;
+  width: 100%;
+  bottom: -10px;
+  right: 0px;
+  background-color: #f48e22;
+  border-radius: 5px;
 }
 
 /* landing page */
+@media(min-width: 992px)
+{
+  header .caption::before {
+    position: absolute;
+    content: '';
+    width: 256px;
+    height: 205px;
+    position: absolute;
+    background: url('../photoes/homepage/pan.png') center center no-repeat;
+    background-size: cover;
+    z-index: -1;
+    bottom: -25%;
+    right: 50%;
+    opacity: .5;
+    z-index: -1;
+  }
+}
+header .img {
+  background-size: cover;
+  background: center center no-repeat;
+  height: 100vh;
+  animation: 9s changeBackgroundImage infinite alternate;
+}
+
+header .btn {
+  background-color: #f48e22;
+  width: fit-content;
+  position: relative;
+  color: #fff;
+  border: none;
+  overflow: hidden;
+  transition: all 0.4s ease;
+  z-index: 1;
+  border: 1px solid #f48e22c9;
+  box-shadow: 0 0 10px #f48e22c9;
+  overflow: visible;
+}
+
+header .btn:hover {
+  color: #f48e22;
+  background-color: white
+}
+
+header .btn::before,
+header .btn::after {
+  content: "";
+  position: absolute;
+  inset: -4px;
+  border: 2px solid #f48e22;
+  border-radius: inherit;
+  animation: pulseOut 2s ease-out infinite;
+  opacity: 0;
+}
+
+header.btn::after {
+  animation-delay: 1s;
+}
 
 @media(max-width: 768px)
 {
   header {
     margin-top: 50px;
   }
-}
-header .img {
-  background: url('../photoes/homepage/cover.png') center center no-repeat;
-  background-size: cover;
-  height: 100vh;
+
+  header .btn {
+    margin: 0px auto;
+  }
 }
 
-header .btn {
-  background-color: #f48e22;
-  color: white;
-  width: fit-content;
-  transition: 400ms;
-}
-
-header .btn:hover{
-  color: #f48e22;
-  background-color:white
-}
-
-/*auto slide*/
-.carousel-caption {
-  width: fit-content;
-  bottom: 40px;
-  background-color: #aaaaaab0;
-}
-
-.menu {
-  background-color: #f48e22;
-}
-
-.menu a {
-  text-decoration: none;
-}
-
-.menu img {
-  transition: all 1s ease;
-  position: relative;
-  width: 120px;
-  height: 120px;
-  margin-top: 50px;
-  animation: pulse 1.3s infinite;
-}
-
-.menu img:hover {
-  transform: scale(1.150);
-}
-
-.menu i {
-  /* color:orange; */
-  position: relative;
-  top: 55px;
-  right: 25px;
-  font-size: 100px;
-  display: inline-block;
-  animation: bounce 800ms infinite;
-}
-
-.menu p {
-  margin-top: 30px;
-}
 
 /*new dishes*/
 .new-dishes {
@@ -96,8 +108,69 @@ header .btn:hover{
 }
 
 /*announcement section*/
-.latest-announcement {
-  word-wrap: break-word;
+
+.latest-announcement .animatable
+{
+  opacity: 0;
+  transition: 800ms;
+}
+
+
+.latest-announcement .animatable:nth-of-type(1),
+.latest-announcement .animatable:nth-of-type(4),
+.latest-announcement .animatable:nth-of-type(7) {
+  transition-delay: 0.2s;
+}
+
+.latest-announcement .animatable:nth-of-type(2),
+.latest-announcement .animatable:nth-of-type(5),
+.latest-announcement .animatable:nth-of-type(8) {
+  transition-delay: 0.4s;
+}
+
+.latest-announcement .animatable:nth-of-type(3),
+.latest-announcement .animatable:nth-of-type(6),
+.latest-announcement .animatable:nth-of-type(9) {
+  transition-delay: 0.6s;
+}
+
+
+.latest-announcement .start-animation {
+  opacity: 1;
+}
+
+@media(min-width: 992px)
+{
+
+  .latest-announcement::before ,
+  .latest-announcement::after {
+    content: '';
+    position: absolute;
+    background-size: cover;
+    z-index: -1;
+    opacity: .6;
+    width: 256px;
+    height: 256px;
+    top: -100%;
+    transition: 1s;
+    transition-delay: 1s;
+  }
+
+  .latest-announcement::before {
+    background: url('../photoes/homepage/decoration.png') center center no-repeat;
+    right: -30px;
+  }
+  
+  .latest-announcement::after {
+    background: url('../photoes/homepage/ramadan-decorations.png') center center no-repeat;
+    left: -30px;
+  }
+
+  .latest-announcement.start-animation::before , 
+  .latest-announcement.start-animation::after {
+  transform: translateY(0px);
+  top: -23px;
+  }
 }
 
 .latest-announcement .img {
@@ -127,31 +200,40 @@ header .btn:hover{
   overflow: hidden;
 }
 
-@media(min-width: 992px)
-{
-  .testimonials::before {
+@media(min-width: 992px) {
+
+  .testimonials::before , .testimonials::after {
     content: '';
     position: absolute;
     width: 512px;
     height: 512px;
     background: url('../photoes/homepage/orange-circle.png');
-    top: -15%;
-    right: -15%;
-    opacity: .6;
     z-index: -1;
-}
+    opacity: .6;
+    transition: 1s;
+  }
+  .testimonials::before {
+    right: -100%;
+    top: -15%;
+    transition-delay: 200ms;
+  }
+  
+  .testimonials::after {
+    bottom: -15%;
+    left: -100%;
+    transition-delay: 2s;
+  }
 
-.testimonials::after {
-  content: '';
-  position: absolute;
-  width: 512px;
-  height: 512px;
-  background: url('../photoes/homepage/orange-circle.png');
-  bottom: -15%;
-  left: -15%;
-  opacity: .6;
-  z-index: -1;
-}
+  .testimonials.start-animation::before
+  {
+    right: -15%;
+  }
+  
+  .testimonials.start-animation::after
+  {
+    left: -15%;
+  }
+
 }
 
 .testimonials .active {
@@ -159,22 +241,22 @@ header .btn:hover{
 }
 
 @media (min-width: 992px) {
-    .testimonials .opinion:nth-of-type(2).active {
-      transform: translateY(-30px);
-    }
+  .testimonials .opinion.active {
+    transform: translateY(-30px);
+  }
 }
 
-.testimonials .active p , .testimonials .active h3{
+.testimonials .active p,
+.testimonials .active h3 {
   color: white !important;
 }
 
-.testimonials .opinion.active  .icon::before
-{
+.testimonials .opinion.active .icon::before {
   background-color: white;
 }
 
-.testimonials > h3 {
-  color: rgb(53, 84, 170);
+.testimonials .main-title {
+  color: rgb(78, 53, 170);
 }
 
 .testimonials i {
@@ -183,24 +265,47 @@ header .btn:hover{
 }
 
 .testimonials .opinions {
-  grid-template-columns: repeat(auto-fill , minmax(300px , 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 20px;
 }
 
 .testimonials .opinion {
- background-color: #feffff;
- position: relative;
+  background-color: #feffff;
+  position: relative;
+  opacity: 0;
+  transition: 800ms;
 }
 
-.testimonials .opinion  .icon {
+.testimonials .opinion:nth-of-type(1)
+{
+  transition-delay: .2s;
+}
+
+.testimonials .opinion:nth-of-type(2)
+{
+  transition-delay: .4s;
+}
+
+
+.testimonials .opinion:nth-of-type(3)
+{
+  transition-delay: .6s;
+}
+
+
+.testimonials .opinion.start-animation {
+  opacity: 1;
+}
+
+.testimonials .opinion .icon {
   max-width: 75px;
   position: absolute;
-  left:50%;
+  left: 50%;
   top: -50px;
   transform: translateX(-50%);
 }
 
-.testimonials .opinion  .icon::before {
+.testimonials .opinion .icon::before {
   content: '';
   position: absolute;
   width: 110px;
@@ -208,9 +313,17 @@ header .btn:hover{
   background-color: #ddd;
   z-index: -1;
   transform: translateX(-50%);
-  left:50%;
+  left: 50%;
   top: -15px;
-  border-radius: 50% ;
+  border-radius: 50%;
+}
+
+.testimonials .opinion .person-name {
+  font-family: "El Messiri";
+}
+
+.testimonials .opinion .comment {
+  margin-top: 150px !important;
 }
 
 .testimonials .opinion .comment::before {
@@ -224,29 +337,9 @@ header .btn:hover{
   opacity: .5
 }
 
-.testimonials .opinion .comment {
-  margin-top: 150px !important;
-}
 /*footer*/
 footer {
   background-color: #282932;
-}
-
-.main-title {
-  position: relative;
-  font-family: "El Messiri";
-  width: fit-content;
-}
-
-.main-title::after {
-  content: '';
-  position: absolute;
-  height: 5px;
-  width: 100%;
-  bottom: -10px;
-  right: 0px;
-  background-color: #f48e22;
-  border-radius: 5px;
 }
 
 footer .image {
@@ -268,42 +361,56 @@ footer .qr-image {
   border: 3px dashed #f48e22;
 }
 
-/*grouping*/
+footer .animatable {
+  opacity: 0;
+  transition: 500ms;
+}
 
-#view,
-.new-dishes {
-  direction: ltr;
+footer .animatable:nth-last-of-type(2)
+{
+  transition-delay: .2s;
+}
+
+footer .animatable:nth-last-of-type(1)
+{
+  transition-delay: .4s;
+  
+}
+
+footer .animatable:nth-last-of-type(3)
+{
+  transition-delay: .6s;
+  
+}
+
+footer .start-animation {
+  opacity: 1;
 }
 
 /*animation*/
-@keyframes pulse {
-  from {
-    transform: scale3d(1, 1, 1);
+@keyframes pulseOut {
+  0% {
+    transform: scale(1);
+    opacity: 1;
   }
 
-  50% {
-    transform: scale3d(1.05, 1.05, 1.05);
-  }
-
-  to {
-    transform: scale3d(1, 1, 1);
+  100% {
+    transform: scale(1.3);
+    opacity: 0;
   }
 }
 
-@keyframes bounce {
+@keyframes changeBackgroundImage {
+  0% {
+  background-image: url('../photoes/homepage/cover.png');
 
-  0%,
-  10%,
-  20%,
-  40%,
-  50%,
-  80%,
-  100% {
-    transform: translateX(0px);
   }
 
-  30%,
-  60% {
-    transform: translateX(20px);
+  50% {
+  background-image: url('../photoes/homepage/scene2.jpg');
+  }
+
+  100% {
+    background-image: url('../photoes/homepage/scene3.jpg');
   }
 }
