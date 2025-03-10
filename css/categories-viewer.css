@@ -4,7 +4,7 @@ body
     background: url("../photoes/shared/food-background.jpg") no-repeat fixed center  center;
     background-size: cover;
 }
-.container { margin-top:150px; margin-bottom: 40px; }
+.cate.container { margin-top:150px; margin-bottom: 40px; }
 .category-item
 {
     background-color: #3f372e;
