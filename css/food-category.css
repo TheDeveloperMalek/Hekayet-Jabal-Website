@@ -21,9 +21,9 @@ body {
   background-size: cover;
 }
 
-.container {
-  margin-top: 100px;
-  margin-bottom: 40px;
+.cate.container {
+  margin-top: 150px; 
+  margin-bottom: 50px;
 }
 
 /*categories styling*/

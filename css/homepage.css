@@ -25,7 +25,25 @@ p {
 }
 
 /* landing page */
-@media(min-width: 992px)
+
+@media(max-width: 768px)
+{
+  header {
+    margin-top: 100px;
+  }
+  header .btn {
+    margin: 0px auto;
+  }
+}
+
+@media(min-width:992px)
+{
+  header {
+    margin-top: 78px; 
+  }
+}
+
+@media(min-width: 1200px)
 {
   header .caption::before {
     position: absolute;
@@ -43,10 +61,9 @@ p {
   }
 }
 header .img {
-  background-size: cover;
   background: center center no-repeat;
-  height: 100vh;
-  animation: 9s changeBackgroundImage infinite alternate;
+  height: 570px;
+  animation: 16s changeBackgroundImage infinite alternate;
 }
 
 header .btn {
@@ -81,30 +98,6 @@ header .btn::after {
 
 header.btn::after {
   animation-delay: 1s;
-}
-
-@media(max-width: 768px)
-{
-  header {
-    margin-top: 50px;
-  }
-
-  header .btn {
-    margin: 0px auto;
-  }
-}
-
-
-/*new dishes*/
-.new-dishes {
-  padding-top: 10px;
-  min-height: 200px;
-  min-width: 200px;
-  background-color: crimson;
-}
-
-.new-dishes h3 {
-  color: orange
 }
 
 /*announcement section*/
@@ -142,8 +135,8 @@ header.btn::after {
 @media(min-width: 992px)
 {
 
-  .latest-announcement::before ,
-  .latest-announcement::after {
+  .latest-announcement .container::before ,
+  .latest-announcement .container::after {
     content: '';
     position: absolute;
     background-size: cover;
@@ -156,20 +149,20 @@ header.btn::after {
     transition-delay: 1s;
   }
 
-  .latest-announcement::before {
+  .latest-announcement.animatable .container::before {
     background: url('../photoes/homepage/decoration.png') center center no-repeat;
-    right: -30px;
+    right: -10%;
   }
   
-  .latest-announcement::after {
+  .latest-announcement.animatable .container::after {
     background: url('../photoes/homepage/ramadan-decorations.png') center center no-repeat;
-    left: -30px;
+    left: -10%;
   }
 
-  .latest-announcement.start-animation::before , 
-  .latest-announcement.start-animation::after {
+  .latest-announcement.start-animation .container::before , 
+  .latest-announcement.start-animation .container::after {
   transform: translateY(0px);
-  top: -23px;
+  top: -73px;
   }
 }
 
@@ -202,7 +195,7 @@ header.btn::after {
 
 @media(min-width: 992px) {
 
-  .testimonials::before , .testimonials::after {
+  .testimonials .container::before , .testimonials .container::after {
     content: '';
     position: absolute;
     width: 512px;
@@ -212,26 +205,26 @@ header.btn::after {
     opacity: .6;
     transition: 1s;
   }
-  .testimonials::before {
+  .testimonials .container::before {
     right: -100%;
     top: -15%;
     transition-delay: 200ms;
   }
   
-  .testimonials::after {
+  .testimonials .container::after {
     bottom: -15%;
     left: -100%;
     transition-delay: 2s;
   }
 
-  .testimonials.start-animation::before
+  .testimonials.start-animation .container::before
   {
-    right: -15%;
+    right: -25%;
   }
   
-  .testimonials.start-animation::after
+  .testimonials.start-animation .container::after
   {
-    left: -15%;
+    left: -25%;
   }
 
 }
@@ -240,7 +233,7 @@ header.btn::after {
   background-color: #f48e22 !important;
 }
 
-@media (min-width: 992px) {
+@media (min-width: 1200px) {
   .testimonials .opinion.active {
     transform: translateY(-30px);
   }
@@ -264,11 +257,29 @@ header.btn::after {
   top: 5px;
 }
 
-.testimonials .opinions {
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 20px;
+@media(max-width: 768px)
+{
+  .testimonials .opinions {
+    grid-template-columns: repeat(1 , 1fr);
+    gap: 40px;
+  }
 }
 
+@media(min-width: 992px)
+{ 
+  .testimonials .opinions {
+    grid-template-columns: repeat(2 , 1fr);
+    gap: 20px;
+  }
+}
+
+@media(min-width: 1200px)
+{
+  .testimonials .opinions {
+    grid-template-columns: repeat(3 , 1fr);
+    gap: 40px;
+  }
+}
 .testimonials .opinion {
   background-color: #feffff;
   position: relative;
@@ -404,6 +415,10 @@ footer .start-animation {
   0% {
   background-image: url('../photoes/homepage/cover.png');
 
+  }
+
+  25%{
+  background-image: url('../photoes/homepage/scene1.jpg');
   }
 
   50% {
