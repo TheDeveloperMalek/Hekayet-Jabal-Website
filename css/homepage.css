@@ -2,7 +2,7 @@
   font-family: Amiri;
 }
 
-p {
+body {
   font-size: 23px;
 }
 
@@ -14,7 +14,7 @@ p {
 }
 
 .main-title::after {
-  content: '';
+  content: "";
   position: absolute;
   height: 5px;
   width: 100%;
@@ -26,44 +26,72 @@ p {
 
 /* landing page */
 
-@media(max-width: 768px)
-{
+header .container::before {
+  content: '';
+  position: absolute;
+  width: 180px;
+  height: 180px;
+  background: #f48e22;
+  background: linear-gradient(225deg, #DF8F4C, #f48e22);
+  top: -60px;
+  right: -60px;
+  filter: blur(120px);
+  border-radius: 50%;
+  z-index: -1;
+}
+
+@media (max-width: 768px) {
   header {
     margin-top: 100px;
   }
+
+
   header .btn {
     margin: 0px auto;
   }
 }
 
-@media(min-width:992px)
-{
+@media (min-width: 768px) {
   header {
-    margin-top: 78px; 
+    margin-top: 78px;
   }
 }
 
-@media(min-width: 1200px)
-{
+@media (min-width: 992px) {
+  header .container::before {
+    width: 250px;
+    height: 250px;
+    top: -50px;
+    right: -50px;
+    filter: blur(140px);
+  }
+}
+
+@media (min-width: 1200px) {
   header .caption::before {
     position: absolute;
-    content: '';
+    content: "";
     width: 256px;
     height: 205px;
     position: absolute;
-    background: url('../photoes/homepage/pan.png') center center no-repeat;
+    background: url("../photoes/homepage/pan.png") center center no-repeat;
     background-size: cover;
     z-index: -1;
     bottom: -25%;
     right: 50%;
-    opacity: .5;
+    opacity: 0.5;
     z-index: -1;
   }
 }
+
 header .img {
   background: center center no-repeat;
-  height: 570px;
+  height: 530px;
+  background-image: url("../photoes/homepage/cover.png");
+  border-radius: 0% 35%; 
   animation: 16s changeBackgroundImage infinite alternate;
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.521);
+  
 }
 
 header .btn {
@@ -82,7 +110,7 @@ header .btn {
 
 header .btn:hover {
   color: #f48e22;
-  background-color: white
+  background-color: white;
 }
 
 header .btn::before,
@@ -102,12 +130,10 @@ header.btn::after {
 
 /*announcement section*/
 
-.latest-announcement .animatable
-{
+.latest-announcement .animatable {
   opacity: 0;
   transition: 800ms;
 }
-
 
 .latest-announcement .animatable:nth-of-type(1),
 .latest-announcement .animatable:nth-of-type(4),
@@ -127,43 +153,110 @@ header.btn::after {
   transition-delay: 0.6s;
 }
 
-
 .latest-announcement .start-animation {
   opacity: 1;
 }
 
-@media(min-width: 992px)
-{
+.latest-announcement .container::before,
+.latest-announcement .container::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  opacity: 0.6;
+  width: 85px;
+  height: 85px;
+  top: -100%;
+  transition: 1s;
+  transition-delay: 1s;
+}
 
-  .latest-announcement .container::before ,
+.latest-announcement.animatable .container::before {
+  background: url("../photoes/homepage/decoration.png") center center no-repeat;
+  background-size: cover;
+  right: -10px;
+}
+
+.latest-announcement.animatable .container::after {
+  background: url("../photoes/homepage/ramadan-decorations.png") center center no-repeat;
+  background-size: cover;
+  left: -10px;
+}
+
+.latest-announcement.start-animation .container::before,
+.latest-announcement.start-animation .container::after {
+  transform: translateY(0px);
+  top: -55px;
+}
+
+@media(min-width: 554px) {
+
+  .latest-announcement .container::before,
   .latest-announcement .container::after {
-    content: '';
-    position: absolute;
-    background-size: cover;
-    z-index: -1;
-    opacity: .6;
-    width: 256px;
-    height: 256px;
-    top: -100%;
-    transition: 1s;
-    transition-delay: 1s;
+    width: 130px;
+    height: 130px;
   }
 
   .latest-announcement.animatable .container::before {
-    background: url('../photoes/homepage/decoration.png') center center no-repeat;
+    right: -3%;
+  }
+
+  .latest-announcement.animatable .container::after {
+    left: -3%;
+  }
+
+}
+
+@media (min-width: 768px) {
+
+  .latest-announcement .container::before,
+  .latest-announcement .container::after {
+    width: 200px;
+    height: 200px;
+  }
+
+  .latest-announcement.animatable .container::before {
+    right: -6%;
+  }
+
+  .latest-announcement.animatable .container::after {
+    left: -6%;
+  }
+
+  .latest-announcement.start-animation .container::before,
+  .latest-announcement.start-animation .container::after {
+    transform: translateY(0px);
+    top: -68px;
+  }
+}
+
+@media (min-width: 992px) {
+  .latest-announcement.animatable .container::before {
+    right: -3%;
+
+  }
+
+  .latest-announcement.animatable .container::after {
+    left: -3%;
+  }
+
+}
+
+@media (min-width: 1200px) {
+
+  .latest-announcement .container::before,
+  .latest-announcement .container::after {
+    width: 256px;
+    height: 256px;
+  }
+
+  .latest-announcement.animatable .container::before {
     right: -10%;
   }
-  
+
   .latest-announcement.animatable .container::after {
-    background: url('../photoes/homepage/ramadan-decorations.png') center center no-repeat;
     left: -10%;
   }
 
-  .latest-announcement.start-animation .container::before , 
-  .latest-announcement.start-animation .container::after {
-  transform: translateY(0px);
-  top: -73px;
-  }
 }
 
 .latest-announcement .img {
@@ -193,40 +286,96 @@ header.btn::after {
   overflow: hidden;
 }
 
-@media(min-width: 992px) {
+.testimonials .container::before,
+.testimonials .container::after {
+  content: "";
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background: url("../photoes/homepage/orange-circle.png") no-repeat center center;
+  background-size: cover;
+  z-index: -1;
+  opacity: 0.6;
+  transition: 1s;
+}
 
-  .testimonials .container::before , .testimonials .container::after {
-    content: '';
-    position: absolute;
-    width: 512px;
-    height: 512px;
-    background: url('../photoes/homepage/orange-circle.png');
-    z-index: -1;
-    opacity: .6;
-    transition: 1s;
-  }
-  .testimonials .container::before {
-    right: -100%;
-    top: -15%;
-    transition-delay: 200ms;
-  }
-  
+.testimonials .container::before {
+  right: -100%;
+  top: -5%;
+  transition-delay: 200ms;
+}
+
+.testimonials .container::after {
+  bottom: -5%;
+  left: -100%;
+  transition-delay: 2s;
+}
+
+.testimonials.start-animation .container::before {
+  right: -28%;
+}
+
+.testimonials.start-animation .container::after {
+  left: -28%;
+}
+
+@media (min-width: 554px) {
+
+  .testimonials .container::before,
   .testimonials .container::after {
-    bottom: -15%;
-    left: -100%;
-    transition-delay: 2s;
+    width: 260px;
+    height: 260px;
   }
 
-  .testimonials.start-animation .container::before
-  {
+  .testimonials .container::before {
+    top: -5%;
+  }
+
+  .testimonials .container::after {
+    bottom: -5%;
+  }
+
+  .testimonials.start-animation .container::before {
     right: -25%;
   }
-  
-  .testimonials.start-animation .container::after
-  {
+
+  .testimonials.start-animation .container::after {
     left: -25%;
   }
+}
 
+@media (min-width: 768px) {
+
+  .testimonials .container::before,
+  .testimonials .container::after {
+    width: 350px;
+    height: 350px;
+  }
+}
+
+@media (min-width: 992px) {
+
+  .testimonials .container::before,
+  .testimonials .container::after {
+    width: 512px;
+    height: 512px;
+  }
+
+  .testimonials .container::before {
+    top: -15%;
+  }
+
+  .testimonials .container::after {
+    bottom: -15%;
+  }
+
+  .testimonials.start-animation .container::before {
+    right: -25%;
+  }
+
+  .testimonials.start-animation .container::after {
+    left: -25%;
+  }
 }
 
 .testimonials .active {
@@ -257,29 +406,27 @@ header.btn::after {
   top: 5px;
 }
 
-@media(max-width: 768px)
-{
+@media (max-width: 768px) {
   .testimonials .opinions {
-    grid-template-columns: repeat(1 , 1fr);
+    grid-template-columns: repeat(1, 1fr);
     gap: 40px;
   }
 }
 
-@media(min-width: 992px)
-{ 
+@media (min-width: 992px) {
   .testimonials .opinions {
-    grid-template-columns: repeat(2 , 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 20px;
   }
 }
 
-@media(min-width: 1200px)
-{
+@media (min-width: 1200px) {
   .testimonials .opinions {
-    grid-template-columns: repeat(3 , 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 40px;
   }
 }
+
 .testimonials .opinion {
   background-color: #feffff;
   position: relative;
@@ -287,22 +434,17 @@ header.btn::after {
   transition: 800ms;
 }
 
-.testimonials .opinion:nth-of-type(1)
-{
-  transition-delay: .2s;
+.testimonials .opinion:nth-of-type(1) {
+  transition-delay: 0.2s;
 }
 
-.testimonials .opinion:nth-of-type(2)
-{
-  transition-delay: .4s;
+.testimonials .opinion:nth-of-type(2) {
+  transition-delay: 0.4s;
 }
 
-
-.testimonials .opinion:nth-of-type(3)
-{
-  transition-delay: .6s;
+.testimonials .opinion:nth-of-type(3) {
+  transition-delay: 0.6s;
 }
-
 
 .testimonials .opinion.start-animation {
   opacity: 1;
@@ -317,7 +459,7 @@ header.btn::after {
 }
 
 .testimonials .opinion .icon::before {
-  content: '';
+  content: "";
   position: absolute;
   width: 110px;
   height: 110px;
@@ -338,14 +480,14 @@ header.btn::after {
 }
 
 .testimonials .opinion .comment::before {
-  content: '\F6B0';
-  font-family: 'bootstrap-icons';
+  content: "\F6B0";
+  font-family: "bootstrap-icons";
   font-size: 80px;
   left: 50%;
   transform: translateX(-50%);
   top: -130px;
   position: absolute;
-  opacity: .5
+  opacity: 0.5;
 }
 
 /*footer*/
@@ -377,21 +519,16 @@ footer .animatable {
   transition: 500ms;
 }
 
-footer .animatable:nth-last-of-type(2)
-{
-  transition-delay: .2s;
+footer .animatable:nth-last-of-type(2) {
+  transition-delay: 0.2s;
 }
 
-footer .animatable:nth-last-of-type(1)
-{
-  transition-delay: .4s;
-  
+footer .animatable:nth-last-of-type(1) {
+  transition-delay: 0.4s;
 }
 
-footer .animatable:nth-last-of-type(3)
-{
-  transition-delay: .6s;
-  
+footer .animatable:nth-last-of-type(3) {
+  transition-delay: 0.6s;
 }
 
 footer .start-animation {
@@ -413,19 +550,18 @@ footer .start-animation {
 
 @keyframes changeBackgroundImage {
   0% {
-  background-image: url('../photoes/homepage/cover.png');
-
+    background-image: url("../photoes/homepage/cover.png");
   }
 
-  25%{
-  background-image: url('../photoes/homepage/scene1.jpg');
+  25% {
+    background-image: url("../photoes/homepage/scene1.jpg");
   }
 
   50% {
-  background-image: url('../photoes/homepage/scene2.jpg');
+    background-image: url("../photoes/homepage/scene2.jpg");
   }
 
   100% {
-    background-image: url('../photoes/homepage/scene3.jpg');
+    background-image: url("../photoes/homepage/scene3.jpg");
   }
 }

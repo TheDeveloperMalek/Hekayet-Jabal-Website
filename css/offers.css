@@ -13,6 +13,9 @@ h5 {
 
 .offers .card {
     position: relative;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.76);
+    background-color: #FAD961;
+    background-image: linear-gradient(280deg , #fad961 0%, #f48e22 100%);
 }
 
 .offers .card::before {
@@ -20,8 +23,8 @@ h5 {
     position: absolute;
     top: 106px;
     right: 28px;
-    border: 12px solid white;
-    border-color: transparent transparent white transparent;
+    border: 12px solid transparent;
+    border-color: transparent transparent #fdc752 transparent;
     z-index: 2;
 }
 
@@ -43,6 +46,28 @@ h5 {
     direction: rtl;
 }
 
+.offers .card-body p {
+    color:#f7ee77;
+    position: relative;
+    width: fit-content;
+}
+
+.offers .card-body p:nth-of-type(1)
+{
+    margin-inline: auto;
+}
+
+.offers .card-body p::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    bottom: -5px;
+    border-radius: 50px;
+    left: 0px;
+    background-color: #e9e9e9;
+}
+
 .offers .card-body ul li::before {
     content: '\F582';
     font-family: "bootstrap-icons";
@@ -58,7 +83,7 @@ h5 {
     position: absolute;
     left: 10px;
     top: 71%;
-    opacity: .4;
+    opacity: .6;
     transform: rotateY(180deg);
 }
 
